@@ -6,7 +6,6 @@ const Formulario = ({ inputs, aoCalcular }) => {
     return (
         <section className='formulario'>
             <form onSubmit={aoCalcular}>
-                <h2>Preencha os dados para calculo do salário</h2>
                 {/* Mapeando inputs dinamicamente */}
                 {inputs.map((input, index) => (
                     <InputTexto

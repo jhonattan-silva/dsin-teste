@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Formulario from "../../componentes/Formulario/Formulario";
+import Header from "../../componentes/Header/Header";
 
 const Exercicio3 = () => {
     // Definindo estado para o custo de fábrica
@@ -48,10 +49,13 @@ const Exercicio3 = () => {
     ];
 
     return (
-        <section>
-            <h1>3) Cálculo do Custo ao Consumidor do Carro</h1>
-            <Formulario inputs={inputs} aoCalcular={aoCalcularCusto} />
-        </section>
+        <>
+            <Header />
+            <section>
+                <h1>3) Cálculo do Custo ao Consumidor do Carro</h1>
+                <Formulario inputs={inputs} aoCalcular={aoCalcularCusto} />
+            </section>
+        </>
     );
 };
 

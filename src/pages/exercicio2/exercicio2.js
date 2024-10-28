@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Formulario from "../../componentes/Formulario/Formulario";
+import Header from "../../componentes/Header/Header";
 
 const Exercicio2 = () => {
     // Definindo estados para os 4 inputs
@@ -11,7 +12,7 @@ const Exercicio2 = () => {
     // Função de validação dos valores
     const aoValidarValores = (evento) => {
         evento.preventDefault();
-        
+
         const A = parseInt(valorA);
         const B = parseInt(valorB);
         const C = parseInt(valorC);
@@ -27,7 +28,7 @@ const Exercicio2 = () => {
         ) {
             console.log(`A=${A} B=${B} C=${C} D=${D}`);
             console.log(`Se ${B} > ${C} ---> ${D} > ${A} ---> ${C}+${D} > ${A}+${B} ---> ${C} e ${D} > 0 ---> ${A} é par ---> OK`);
-            
+
             alert("Valores aceitos");
         } else {
             alert("Valores não aceitos");
@@ -67,10 +68,13 @@ const Exercicio2 = () => {
     ];
 
     return (
-        <section>
-            <h1>2) Validação de Valores</h1>
-            <Formulario inputs={inputs} aoCalcular={aoValidarValores} />
-        </section>
+        <>
+            <Header />
+            <section>
+                <h1>2) Validação de Valores</h1>
+                <Formulario inputs={inputs} aoCalcular={aoValidarValores} />
+            </section>
+        </>
     );
 };
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Formulario from "../../componentes/Formulario/Formulario";
+import Header from "../../componentes/Header/Header";
 
 const Exercicio1 = () => {
     // Definindo estados para cada input
@@ -11,7 +12,7 @@ const Exercicio1 = () => {
     const aoCalcular = (evento) => {
         evento.preventDefault();
 
-        const descontoMensal = 0.15;
+        const descontoMensal = 0.15; //15% desconto
         const salarioBruto = horasDia * precoHora * diasTrabalhados;
         const valorDescontado = salarioBruto * descontoMensal;
         const salarioLiquido = salarioBruto - valorDescontado;
@@ -53,10 +54,13 @@ const Exercicio1 = () => {
     ];
 
     return (
-        <section>
-            <h1>1) Calcular Salário Líquido de um Trabalhador</h1>
-            <Formulario inputs={inputs} aoCalcular={aoCalcular} />
-        </section>
+        <>
+            <Header />
+            <section>
+                <h1>1) Calcular Salário Líquido de um Trabalhador</h1>
+                <Formulario inputs={inputs} aoCalcular={aoCalcular} />
+            </section>
+        </>
     );
 };
 

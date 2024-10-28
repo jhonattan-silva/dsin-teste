@@ -1,0 +1,13 @@
+header {
+    font-size: 50px;
+    font-weight: bold;
+    color: azure;
+    text-align: center;
+  }
+
+  .inicio {
+    display: flex;
+    flex-direction: row; /* ou row, dependendo de como quer os botões alinhados */
+    justify-content: center; /* Centraliza verticalmente */
+    margin-top: 10%;
+}

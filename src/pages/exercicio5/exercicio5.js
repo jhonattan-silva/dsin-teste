@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Formulario from "../../componentes/Formulario/Formulario";
+import Header from "../../componentes/Header/Header";
 
 const Exercicio5 = () => {
     const [placa, setPlaca] = useState('');
@@ -26,7 +27,7 @@ const Exercicio5 = () => {
         }
 
         alert(`Placa: ${placa}\nPadrão: ${tipo}\nCorrespondente: ${correspondente}`);
-        
+
         // Resetando o valor após a verificação
         setPlaca('');
     };
@@ -42,10 +43,13 @@ const Exercicio5 = () => {
     ];
 
     return (
-        <section>
-            <h1>5) Verificação de Placa: Brasil ou Mercosul</h1>
-            <Formulario inputs={inputs} aoCalcular={aoVerificarPlaca} />
-        </section>
+        <>
+            <Header />
+            <section>
+                <h1>5) Verificação de Placa: Brasil ou Mercosul</h1>
+                <Formulario inputs={inputs} aoCalcular={aoVerificarPlaca} />
+            </section>
+        </>
     );
 };
 

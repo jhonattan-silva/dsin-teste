@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Formulario from "../../componentes/Formulario/Formulario";
+import Header from "../../componentes/Header/Header";
 
 const Exercicio4 = () => {
     // Estado para o valor digitado
@@ -9,7 +10,7 @@ const Exercicio4 = () => {
     const aoCalcularNotas = (evento) => {
         evento.preventDefault();
 
-        let valorRestante = parseInt(valor); 
+        let valorRestante = parseInt(valor);
 
         // Definindo as cédulas disponíveis
         const cedulas = [100, 50, 20, 10, 5, 2, 1];
@@ -51,10 +52,13 @@ const Exercicio4 = () => {
     ];
 
     return (
-        <section>
-            <h1>4) Decomposição de Valor em Notas</h1>
-            <Formulario inputs={inputs} aoCalcular={aoCalcularNotas} />
-        </section>
+        <>
+            <Header />
+            <section>
+                <h1>4) Decomposição de Valor em Notas</h1>
+                <Formulario inputs={inputs} aoCalcular={aoCalcularNotas} />
+            </section>
+        </>
     );
 };
 

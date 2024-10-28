@@ -1,0 +1,16 @@
+.resultado {
+    width: 50%;
+    margin: 0 auto; /* Centraliza a div horizontalmente */
+    text-align: center; /* Centraliza o conteúdo dentro da div */
+    background-color: aliceblue;
+}
+
+.resultado ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0;
+}
+
+.resultado li {
+    padding: 8px 0; 
+    border-bottom: 1px solid #442525; 
+}
